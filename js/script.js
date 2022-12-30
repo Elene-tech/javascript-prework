@@ -32,7 +32,7 @@ printMessage('Computer move is: ' + computerMove);
 let playerInput = prompt('Choose your move! 1: stone, 2: paper, 3: scissors.');
 
 console.log (playerInput);
-let playerMove = getMoveName (playerInput);
+let playerMove = getMoveName (Number(playerInput));
 printMessage('Your move is: ' + playerMove);
 
 /*if (playerInput === 1){
@@ -47,13 +47,14 @@ printMessage('Your move is: ' + playerMove);
 
 //winner
 
-if (computerMove===playerMove){
-  printMessage('Both have won - Draw !');
-} else if (computerMove===stone && playerMove===paper || computerMove===paper && playerMove===scissors || computerMove===scissors && playerMove===stone)
-
-  printMessage('You have won!');
-  else {
-  printMessage('Computer has won!');
+function displayResult(argComputerMove,argPlayerMove){
+  if (argComputerMove === argPlayerMove)
+  printMessage('Both win - Draw!');
+  else if(argComputerMove ==='stone'&&argPlayerMove ==='paper' || argComputerMove === 'paper' && argPlayerMove === 'scissors' || argComputerMove === 'scissors' && argPlayerMove === 'stone')
+  {
+    printMessage('You have won!');
+  } else {
+    printMessage('Computer has won!');
+  }
 }
- 
-
+displayResult(computerMove,playerMove);
