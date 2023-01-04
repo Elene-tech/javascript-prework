@@ -18,18 +18,14 @@ function playGame(playerInput){
 
         let randomNumber = Math.floor(Math.random() * 3 + 1);
 
-        console.log('the number drawn is: ' + randomNumber); //random number works
-
         let computerMove = getMoveName (randomNumber);
         printMessage('Computer move is: ' + computerMove);
 
 
         //Player//
 
-        /*let playerInput = prompt('Choose your move! 1: stone, 2: paper, 3: scissors.');*/
-
         console.log (playerInput);
-        let playerMove = getMoveName (Number(playerInput));
+        let playerMove = getMoveName (playerInput);
         printMessage('Your move is: ' + playerMove);
 
       
