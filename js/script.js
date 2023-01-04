@@ -16,16 +16,15 @@ function playGame(playerInput){
         }
 
 
-        let randomNumber = Math.floor(Math.random() * 3 + 1);
+        const randomNumber = Math.floor(Math.random() * 3 + 1);
 
-        let computerMove = getMoveName (randomNumber);
+        const computerMove = getMoveName (randomNumber);
         printMessage('Computer move is: ' + computerMove);
 
 
         //Player//
 
-        console.log (playerInput);
-        let playerMove = getMoveName (playerInput);
+        const playerMove = getMoveName (playerInput);
         printMessage('Your move is: ' + playerMove);
 
       
